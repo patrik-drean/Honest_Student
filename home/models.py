@@ -4,7 +4,8 @@ from django.utils import timezone
 # from django.contrib.auth.models import AbstractUser
 
 class Review(models.Model):
-    rating = models.IntegerField
+    rating = models.IntegerField()
+    message = models.TextField()
     create_date = models.DateTimeField(auto_now_add=True)
     last_modified_date = models.DateTimeField(auto_now=True)
 
