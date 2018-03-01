@@ -1,0 +1,24 @@
+#optional_div {
+   border: 2px #116EA1 solid;
+   min-height: 15em;
+}
+h1 {
+   margin: .5em 0 0 1em;
+}
+hr {
+   width: 95%;
+   border: 1px #afafaf solid;
+}
+#form {
+   margin-left: 8em;
+}
+label {
+   font-size: 1em;
+}
+button
+{
+   position: relative;
+   top: .2em;
+   right: 2.5em;
+   margin: 0 .5em;
+}

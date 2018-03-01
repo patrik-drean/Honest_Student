@@ -1,5 +1,30 @@
 <%inherit file="base.htm" />
 
-<%block name="top_content">
+<%block name="middle_content">
+<br /><br /><br />
+   <div id = 'optional_div'>
+      <h1>Optional Information</h1>
+      <hr />
+
+      ${ form }
+<br />
+      <div class="row">
+         <div class="col-md-1"></div>
+         <div class="checkbox">
+            <p><input name="mailing_list" class="" id="id_mailing_list" type="checkbox" > Mark here if you'd like updates on our progress in this discussion</p>
+         </div>
+      </div>
+      <br />
+         ## submit button
+         <p class="">
+            <button type="submit" class="btn btn-outline-primary float-right">${ form.submit_text | h }</button>
+            <button type="submit" class=" btn btn-outline-primary float-right">Skip</button>
+
+            <br /><br />
+         </p>
+         </form>
+     </div>
+
+   </div>
 
 </%block>

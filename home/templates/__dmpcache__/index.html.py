@@ -5,7 +5,7 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1519911423.41683
+_modified_time = 1519922860.5110028
 _enable_loop = True
 _template_filename = '/Users/patrikdrean/Documents/python_projects/honest_student/honest_student/home/templates/index.html'
 _template_uri = 'index.html'
@@ -29,7 +29,6 @@ def render_body(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
         __M_locals = __M_dict_builtin(pageargs=pageargs)
-        dogs = context.get('dogs', UNDEFINED)
         def top_content():
             return render_top_content(context._locals(__M_locals))
         __M_writer = context.writer()
@@ -47,12 +46,9 @@ def render_body(context,**pageargs):
 def render_top_content(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
-        dogs = context.get('dogs', UNDEFINED)
         def top_content():
             return render_top_content(context)
         __M_writer = context.writer()
-        __M_writer('\n')
-        __M_writer(str( dogs ))
         __M_writer('\n')
         return ''
     finally:
@@ -61,6 +57,6 @@ def render_top_content(context,**pageargs):
 
 """
 __M_BEGIN_METADATA
-{"filename": "/Users/patrikdrean/Documents/python_projects/honest_student/honest_student/home/templates/index.html", "uri": "index.html", "source_encoding": "utf-8", "line_map": {"28": 0, "36": 1, "41": 5, "47": 3, "54": 3, "55": 4, "56": 4, "62": 56}}
+{"filename": "/Users/patrikdrean/Documents/python_projects/honest_student/honest_student/home/templates/index.html", "uri": "index.html", "source_encoding": "utf-8", "line_map": {"28": 0, "35": 1, "40": 4, "46": 3, "52": 3, "58": 52}}
 __M_END_METADATA
 """

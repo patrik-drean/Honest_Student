@@ -5,7 +5,7 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1519916620.193704
+_modified_time = 1519930553.247692
 _enable_loop = True
 _template_filename = '/Users/patrikdrean/Documents/python_projects/honest_student/honest_student/home/templates/review.html'
 _template_uri = 'review.html'
@@ -29,11 +29,11 @@ def render_body(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
         __M_locals = __M_dict_builtin(pageargs=pageargs)
-        def top_content():
-            return render_top_content(context._locals(__M_locals))
         def middle_content():
             return render_middle_content(context._locals(__M_locals))
         form = context.get('form', UNDEFINED)
+        def top_content():
+            return render_top_content(context._locals(__M_locals))
         __M_writer = context.writer()
         __M_writer('\n\n')
         if 'parent' not in context._data or not hasattr(context._data['parent'], 'top_content'):
@@ -72,7 +72,9 @@ def render_middle_content(context,**pageargs):
         __M_writer = context.writer()
         __M_writer('\n   ')
         __M_writer(str( form ))
-        __M_writer('\n')
+        __M_writer('\n   <button type="submit" class="btn btn-outline-primary">')
+        __M_writer(filters.html_escape(str( form.submit_text )))
+        __M_writer('</button>\n</form>\n</div>\n')
         return ''
     finally:
         context.caller_stack._pop_frame()
@@ -80,6 +82,6 @@ def render_middle_content(context,**pageargs):
 
 """
 __M_BEGIN_METADATA
-{"filename": "/Users/patrikdrean/Documents/python_projects/honest_student/honest_student/home/templates/review.html", "uri": "review.html", "source_encoding": "utf-8", "line_map": {"28": 0, "38": 1, "43": 15, "48": 18, "54": 3, "60": 3, "66": 16, "73": 16, "74": 17, "75": 17, "81": 75}}
+{"filename": "/Users/patrikdrean/Documents/python_projects/honest_student/honest_student/home/templates/review.html", "uri": "review.html", "source_encoding": "utf-8", "line_map": {"28": 0, "38": 1, "43": 15, "48": 21, "54": 3, "60": 3, "66": 16, "73": 16, "74": 17, "75": 17, "76": 18, "77": 18, "83": 77}}
 __M_END_METADATA
 """
