@@ -5,10 +5,10 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1519867966.1968791
+_modified_time = 1519867961.1152918
 _enable_loop = True
-_template_filename = '/Users/patrikdrean/Documents/python_projects/honest_student/honest_student/home/templates/index.html'
-_template_uri = 'index.html'
+_template_filename = '/Users/patrikdrean/Documents/python_projects/honest_student/honest_student/home/templates/review.html'
+_template_uri = 'review.html'
 _source_encoding = 'utf-8'
 import django_mako_plus
 _exports = ['top_content']
@@ -24,7 +24,7 @@ def _mako_generate_namespaces(context):
     pass
 def _mako_inherit(template, context):
     _mako_generate_namespaces(context)
-    return runtime._inherit_from(context, 'app_base.htm', _template_uri)
+    return runtime._inherit_from(context, 'base.htm', _template_uri)
 def render_body(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
@@ -57,6 +57,6 @@ def render_top_content(context,**pageargs):
 
 """
 __M_BEGIN_METADATA
-{"filename": "/Users/patrikdrean/Documents/python_projects/honest_student/honest_student/home/templates/index.html", "uri": "index.html", "source_encoding": "utf-8", "line_map": {"28": 0, "35": 1, "40": 5, "46": 3, "52": 3, "58": 52}}
+{"filename": "/Users/patrikdrean/Documents/python_projects/honest_student/honest_student/home/templates/review.html", "uri": "review.html", "source_encoding": "utf-8", "line_map": {"28": 0, "35": 1, "40": 5, "46": 3, "52": 3, "58": 52}}
 __M_END_METADATA
 """
