@@ -5,7 +5,7 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1519868068.875605
+_modified_time = 1519875461.339374
 _enable_loop = True
 _template_filename = '/Users/patrikdrean/Documents/python_projects/honest_student/honest_student/home/templates/base.htm'
 _template_uri = 'base.htm'
@@ -22,20 +22,20 @@ def render_body(context,**pageargs):
         __M_locals = __M_dict_builtin(pageargs=pageargs)
         def navbar():
             return render_navbar(context._locals(__M_locals))
-        self = context.get('self', UNDEFINED)
-        def right_content():
-            return render_right_content(context._locals(__M_locals))
-        def footer_content():
-            return render_footer_content(context._locals(__M_locals))
         def top_content():
             return render_top_content(context._locals(__M_locals))
         def left_content():
             return render_left_content(context._locals(__M_locals))
         def middle_content():
             return render_middle_content(context._locals(__M_locals))
+        self = context.get('self', UNDEFINED)
+        def right_content():
+            return render_right_content(context._locals(__M_locals))
+        def footer_content():
+            return render_footer_content(context._locals(__M_locals))
         __M_writer = context.writer()
         __M_writer('<!DOCTYPE html>\n<html>\n    <meta charset="UTF-8">\n    <head>\n      ')
-        __M_writer('         \n        <title>Pat\'s Template</title>\n\n       <!-- Bootstrap CSS link -->\n       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">\n\n')
+        __M_writer('\n        <title>Pat\'s Template</title>\n\n        <!-- Google fonts -->\n        <link href="https://fonts.googleapis.com/css?family=Nanum+Pen+Script" rel="stylesheet">\n\n        <!-- SVG cdn import -->\n        <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>\n\n       <!-- Bootstrap CSS link -->\n       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">\n\n')
         __M_writer('        <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>\n\n')
         __M_writer('        <script src="/django_mako_plus/dmp-common.min.js"></script>\n        ')
         __M_writer(str( django_mako_plus.links(self) ))
@@ -143,6 +143,6 @@ def render_footer_content(context,**pageargs):
 
 """
 __M_BEGIN_METADATA
-{"filename": "/Users/patrikdrean/Documents/python_projects/honest_student/honest_student/home/templates/base.htm", "uri": "base.htm", "source_encoding": "utf-8", "line_map": {"17": 6, "19": 0, "37": 2, "38": 6, "39": 13, "40": 16, "41": 17, "42": 17, "47": 21, "52": 26, "57": 31, "62": 34, "67": 37, "72": 42, "78": 21, "89": 26, "100": 31, "111": 34, "122": 37, "133": 42, "144": 133}}
+{"filename": "/Users/patrikdrean/Documents/python_projects/honest_student/honest_student/home/templates/base.htm", "uri": "base.htm", "source_encoding": "utf-8", "line_map": {"17": 6, "19": 0, "37": 2, "38": 6, "39": 19, "40": 22, "41": 23, "42": 23, "47": 27, "52": 32, "57": 37, "62": 40, "67": 43, "72": 48, "78": 27, "89": 32, "100": 37, "111": 40, "122": 43, "133": 48, "144": 133}}
 __M_END_METADATA
 """
