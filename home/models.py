@@ -13,5 +13,5 @@ class User(AbstractCUser):
     school = models.TextField(blank = True, null = True)
     create_date = models.DateTimeField(auto_now_add=True)
     last_modified_date = models.DateTimeField(auto_now=True)
-    # mailing_list = models.BooleanField(default = True)
+    mailing_list = models.BooleanField(default = False)
     review = models.ForeignKey(Review, on_delete=models.CASCADE)
