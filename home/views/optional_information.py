@@ -35,6 +35,13 @@ class OptionalForm(Formless):
     #     self.fields['name'].widget.attrs.update({
     #         'class': 'donkey'
     # })
+    def clean_email(self):
+        # Grab user from database with email. If a user comes back, throw exception
+        email = self.cleaned_data.get('email')
+        users = hmod.User.objects.filter(email = email)
+        if users:
+            raise forms.ValidationError('Email already exists in database')
+        return email
 
     def commit(self):
         review = hmod.Review()
