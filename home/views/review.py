@@ -40,4 +40,5 @@ class ReviewForm(Formless):
         self.submit_text = 'Next'
 
     def commit(self):
+        u = self.cleaned_data.get('rating') 
         pass

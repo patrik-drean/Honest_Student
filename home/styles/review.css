@@ -12,3 +12,12 @@ textarea {
       float: right;
       margin: 4em 1em 0 0;
 }
+
+hr {
+   /* background-color: #FF568BC7; */
+   background-color: #8BB5DF;
+
+}
+.hr_half {
+   margin: .5em 0;
+}
