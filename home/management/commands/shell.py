@@ -4,9 +4,15 @@ from importlib import import_module
 import os
 
 
-IMPORTED_MODULES = (
-    ( 'amod', 'account.models' ),
-)
+def default_imports():
+    # imports listed here are automatically loaded into the shell
+    from home import models as hmod
+    import json
+    import re
+    import os, os.path
+
+    # return the variables created here
+    return locals()
 
 
 class Command(DjangoCommand):
@@ -16,11 +22,7 @@ class Command(DjangoCommand):
     def ptpython(self, options):
         history_filename = os.path.expanduser('~/.ptpython_history')
 
-        # globals and locals for the shell
-        globals_dict = {}
-        for name, mod in IMPORTED_MODULES:
-            globals_dict[name] = import_module(mod)
-        locals_dict = {}
-
         # start the interpreter
+        globals_dict = default_imports()
+        locals_dict = {}
         embed(globals_dict, locals_dict, history_filename=history_filename, configure=run_config)

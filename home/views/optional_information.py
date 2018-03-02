@@ -14,7 +14,7 @@ def process_request(request):
     context = {'form': form,}
     if form.is_valid():
         form.commit()
-        return HttpResponseRedirect('/home/')
+        return HttpResponseRedirect('/home/share')
 
 
     return request.dmp.render('optional_information.html', context)
@@ -40,12 +40,14 @@ class OptionalForm(Formless):
         review = hmod.Review()
         review.rating = self.cleaned_data.get('rating')
         review.message = self.cleaned_data.get('message')
+
         review.save()
         review = hmod.Review.objects.latest('create_date')
 
         user = hmod.User()
         user.first_name = self.cleaned_data.get('name')
         user.email = self.cleaned_data.get('email')
+        user.school = self.cleaned_data.get('school')
 
         if self.request.POST.get('mailing_list') is not None:
             user.mailing_list = True
