@@ -1,9 +1,13 @@
 #star_div {
    margin: 0 auto;
    width: 300px;
+
 }
 .star_wrap{
    padding: 0 10px;
+}
+.far {
+   background-color: white;
 }
 textarea {
    resize: none;
@@ -11,6 +15,7 @@ textarea {
 .btn {
       float: right;
       margin: 4em 1em 0 0;
+      background-color: white;
 }
 
 hr {
@@ -21,3 +26,29 @@ hr {
 .hr_half {
    margin: .5em 0;
 }
+html, body {
+   background-color: #fff;
+   background-image:
+   linear-gradient(90deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px),
+   linear-gradient(#eee .1em, transparent .1em);
+   background-size: 100% 1.2em;
+}
+#vertical_red_line {
+   position: absolute;
+   height: 100%;
+   width: 3px;
+   left: 4.9em;
+   border-right: 1.5px solid #FF568BC7;
+}
+#horizontal_red_line {
+   position: absolute;
+   width: 100%;
+   top: 4.9em;
+   border-bottom: 1.5px solid #FF568BC7;
+}
+#top-section {
+   /* border-bottom: 3px solid #FF568BC7; */
+}
+/* #middle-section {
+   padding: 0;
+} */

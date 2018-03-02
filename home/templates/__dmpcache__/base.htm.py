@@ -5,13 +5,13 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1519875461.339374
+_modified_time = 1519963358.5582132
 _enable_loop = True
 _template_filename = '/Users/patrikdrean/Documents/python_projects/honest_student/honest_student/home/templates/base.htm'
 _template_uri = 'base.htm'
 _source_encoding = 'utf-8'
 import django_mako_plus
-_exports = ['navbar', 'top_content', 'left_content', 'middle_content', 'right_content', 'footer_content']
+_exports = ['navbar', 'global_content', 'top_content', 'left_content', 'middle_content', 'right_content', 'footer_content']
 
 
 import datetime 
@@ -20,19 +20,21 @@ def render_body(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
         __M_locals = __M_dict_builtin(pageargs=pageargs)
+        self = context.get('self', UNDEFINED)
+        def global_content():
+            return render_global_content(context._locals(__M_locals))
         def navbar():
             return render_navbar(context._locals(__M_locals))
-        def top_content():
-            return render_top_content(context._locals(__M_locals))
-        def left_content():
-            return render_left_content(context._locals(__M_locals))
-        def middle_content():
-            return render_middle_content(context._locals(__M_locals))
-        self = context.get('self', UNDEFINED)
         def right_content():
             return render_right_content(context._locals(__M_locals))
+        def middle_content():
+            return render_middle_content(context._locals(__M_locals))
+        def top_content():
+            return render_top_content(context._locals(__M_locals))
         def footer_content():
             return render_footer_content(context._locals(__M_locals))
+        def left_content():
+            return render_left_content(context._locals(__M_locals))
         __M_writer = context.writer()
         __M_writer('<!DOCTYPE html>\n<html>\n    <meta charset="UTF-8">\n    <head>\n      ')
         __M_writer('\n        <title>Pat\'s Template</title>\n\n        <!-- Google fonts -->\n        <link href="https://fonts.googleapis.com/css?family=Nanum+Pen+Script" rel="stylesheet">\n\n        <!-- SVG cdn import -->\n        <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>\n\n       <!-- Bootstrap CSS link -->\n       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">\n\n')
@@ -44,7 +46,12 @@ def render_body(context,**pageargs):
             context['self'].navbar(**pageargs)
         
 
-        __M_writer('\n\n        <main>\n         <div class="row">\n           <div class="col-md-12" id="top-section">\n             ')
+        __M_writer('\n         ')
+        if 'parent' not in context._data or not hasattr(context._data['parent'], 'global_content'):
+            context['self'].global_content(**pageargs)
+        
+
+        __M_writer('\n        <main>\n         <div class="row">\n           <div class="col-md-12" id="top-section">\n             ')
         if 'parent' not in context._data or not hasattr(context._data['parent'], 'top_content'):
             context['self'].top_content(**pageargs)
         
@@ -80,6 +87,17 @@ def render_navbar(context,**pageargs):
     try:
         def navbar():
             return render_navbar(context)
+        __M_writer = context.writer()
+        return ''
+    finally:
+        context.caller_stack._pop_frame()
+
+
+def render_global_content(context,**pageargs):
+    __M_caller = context.caller_stack._push_frame()
+    try:
+        def global_content():
+            return render_global_content(context)
         __M_writer = context.writer()
         return ''
     finally:
@@ -143,6 +161,6 @@ def render_footer_content(context,**pageargs):
 
 """
 __M_BEGIN_METADATA
-{"filename": "/Users/patrikdrean/Documents/python_projects/honest_student/honest_student/home/templates/base.htm", "uri": "base.htm", "source_encoding": "utf-8", "line_map": {"17": 6, "19": 0, "37": 2, "38": 6, "39": 19, "40": 22, "41": 23, "42": 23, "47": 27, "52": 32, "57": 37, "62": 40, "67": 43, "72": 48, "78": 27, "89": 32, "100": 37, "111": 40, "122": 43, "133": 48, "144": 133}}
+{"filename": "/Users/patrikdrean/Documents/python_projects/honest_student/honest_student/home/templates/base.htm", "uri": "base.htm", "source_encoding": "utf-8", "line_map": {"17": 6, "19": 0, "39": 2, "40": 6, "41": 19, "42": 22, "43": 23, "44": 23, "49": 27, "54": 28, "59": 32, "64": 37, "69": 40, "74": 43, "79": 48, "85": 27, "96": 28, "107": 32, "118": 37, "129": 40, "140": 43, "151": 48, "162": 151}}
 __M_END_METADATA
 """

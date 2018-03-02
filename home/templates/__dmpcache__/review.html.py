@@ -5,13 +5,13 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1519956269.7164218
+_modified_time = 1519963517.317139
 _enable_loop = True
 _template_filename = '/Users/patrikdrean/Documents/python_projects/honest_student/honest_student/home/templates/review.html'
 _template_uri = 'review.html'
 _source_encoding = 'utf-8'
 import django_mako_plus
-_exports = ['top_content', 'middle_content']
+_exports = ['global_content', 'top_content', 'middle_content']
 
 
 def _mako_get_namespace(context, name):
@@ -29,13 +29,20 @@ def render_body(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
         __M_locals = __M_dict_builtin(pageargs=pageargs)
-        form = context.get('form', UNDEFINED)
         def top_content():
             return render_top_content(context._locals(__M_locals))
+        def global_content():
+            return render_global_content(context._locals(__M_locals))
         def middle_content():
             return render_middle_content(context._locals(__M_locals))
+        form = context.get('form', UNDEFINED)
         __M_writer = context.writer()
-        __M_writer('\n\n')
+        __M_writer('\n')
+        if 'parent' not in context._data or not hasattr(context._data['parent'], 'global_content'):
+            context['self'].global_content(**pageargs)
+        
+
+        __M_writer('\n')
         if 'parent' not in context._data or not hasattr(context._data['parent'], 'top_content'):
             context['self'].top_content(**pageargs)
         
@@ -51,13 +58,25 @@ def render_body(context,**pageargs):
         context.caller_stack._pop_frame()
 
 
+def render_global_content(context,**pageargs):
+    __M_caller = context.caller_stack._push_frame()
+    try:
+        def global_content():
+            return render_global_content(context)
+        __M_writer = context.writer()
+        __M_writer('\n   <div id = "vertical_red_line"></div>\n   <div id = "horizontal_red_line"></div>\n')
+        return ''
+    finally:
+        context.caller_stack._pop_frame()
+
+
 def render_top_content(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
         def top_content():
             return render_top_content(context)
         __M_writer = context.writer()
-        __M_writer('\n   <br /><br /><br /><br /><br /><br />\n   <h1 class="text-center">How would you rate your experience in secondary education?</h1>\n   <div class="row"id="star_div">\n      <div class="star_wrap"><i class="far fa-star fa-2x"></i></div>\n      <div class="star_wrap"><i class="far fa-star fa-2x"></i></div>\n      <div class="star_wrap"><i class="far fa-star fa-2x"></i></div>\n      <div class="star_wrap"><i class="far fa-star fa-2x"></i></div>\n      <div class="star_wrap"><i class="far fa-star fa-2x"></i></div>\n   </div>\n   <br /><br />\n')
+        __M_writer('\n   <br /><br /><br /><br /><br /><br />\n   <h1 class="text-center">How would you rate your experience in secondary education?</h1>\n   <div class="row"id="star_div">\n      <div class="star_wrap"><i class="far fa-star fa-2x"></i></div>\n      <div class="star_wrap"><i class="far fa-star fa-2x"></i></div>\n      <div class="star_wrap"><i class="far fa-star fa-2x"></i></div>\n      <div class="star_wrap"><i class="far fa-star fa-2x"></i></div>\n      <div class="star_wrap"><i class="far fa-star fa-2x"></i></div>\n   </div>\n\n\n   <br /><br />\n')
         return ''
     finally:
         context.caller_stack._pop_frame()
@@ -82,6 +101,6 @@ def render_middle_content(context,**pageargs):
 
 """
 __M_BEGIN_METADATA
-{"filename": "/Users/patrikdrean/Documents/python_projects/honest_student/honest_student/home/templates/review.html", "uri": "review.html", "source_encoding": "utf-8", "line_map": {"28": 0, "38": 1, "43": 14, "48": 20, "54": 3, "60": 3, "66": 15, "73": 15, "74": 16, "75": 16, "76": 17, "77": 17, "83": 77}}
+{"filename": "/Users/patrikdrean/Documents/python_projects/honest_student/honest_student/home/templates/review.html", "uri": "review.html", "source_encoding": "utf-8", "line_map": {"28": 0, "40": 1, "45": 5, "50": 19, "55": 25, "61": 2, "67": 2, "73": 6, "79": 6, "85": 20, "92": 20, "93": 21, "94": 21, "95": 22, "96": 22, "102": 96}}
 __M_END_METADATA
 """
