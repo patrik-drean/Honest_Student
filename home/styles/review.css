@@ -18,14 +18,6 @@ textarea {
       background-color: white;
 }
 
-hr {
-   /* background-color: #FF568BC7; */
-   background-color: #8BB5DF;
-
-}
-.hr_half {
-   margin: .5em 0;
-}
 html, body {
    background-color: #fff;
    background-image:
@@ -46,9 +38,3 @@ html, body {
    top: 4.9em;
    border-bottom: 1.5px solid #FF568BC7;
 }
-#top-section {
-   /* border-bottom: 3px solid #FF568BC7; */
-}
-/* #middle-section {
-   padding: 0;
-} */
