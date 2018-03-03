@@ -13,7 +13,7 @@ def process_request(request):
     form = OptionalForm(request)
     context = {'form': form,}
     if form.is_valid():
-        form.commit()
+        form.commit(request)
         return HttpResponseRedirect('/home/share')
 
 
@@ -40,10 +40,12 @@ class OptionalForm(Formless):
         email = self.cleaned_data.get('email')
         users = hmod.User.objects.filter(email = email)
         if users:
-            raise forms.ValidationError('Email already exists in database')
+            raise forms.ValidationError('Email already exists')
+        if not re.match(r"[^@]+@[^@]+\.[^@]+", email):
+            raise forms.ValidationError('Invalid email')
         return email
 
-    def commit(self):
+    def commit(self, request):
         review = hmod.Review()
         review.rating = self.cleaned_data.get('rating')
         review.message = self.cleaned_data.get('message')
@@ -52,12 +54,13 @@ class OptionalForm(Formless):
         review = hmod.Review.objects.latest('create_date')
 
         user = hmod.User()
-        user.first_name = self.cleaned_data.get('name')
-        user.email = self.cleaned_data.get('email')
-        user.school = self.cleaned_data.get('school')
+        if 'submit_normal' in request.POST:
+            user.first_name = self.cleaned_data.get('name')
+            user.email = self.cleaned_data.get('email')
+            user.school = self.cleaned_data.get('school')
+            if self.request.POST.get('mailing_list') is not None:
+                user.mailing_list = True
 
-        if self.request.POST.get('mailing_list') is not None:
-            user.mailing_list = True
         user.review = review
 
 

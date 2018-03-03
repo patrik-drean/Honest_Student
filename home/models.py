@@ -15,3 +15,5 @@ class User(AbstractCUser):
     last_modified_date = models.DateTimeField(auto_now=True)
     mailing_list = models.BooleanField(default = False)
     review = models.ForeignKey(Review, on_delete=models.CASCADE)
+    # AbstractCUser._meta.get_field("email")._unique = False
+    # AbstractCUser._meta.get_field("username")._unique = False
