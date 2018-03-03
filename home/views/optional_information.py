@@ -60,6 +60,8 @@ class OptionalForm(Formless):
             user.school = self.cleaned_data.get('school')
             if self.request.POST.get('mailing_list') is not None:
                 user.mailing_list = True
+        else:
+            user.email = ''
 
         user.review = review
 
