@@ -5,7 +5,7 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1520025358.9881558
+_modified_time = 1520115344.33994
 _enable_loop = True
 _template_filename = '/Users/patrikdrean/Documents/python_projects/honest_student/honest_student/home/templates/share.html'
 _template_uri = 'share.html'
@@ -68,7 +68,7 @@ def render_middle_content(context,**pageargs):
         def middle_content():
             return render_middle_content(context)
         __M_writer = context.writer()
-        __M_writer('\n   <br /><br /><br /><br /><br />\n\n   <h1 class="text-center">The world almost knows...</h1>\n   <br /><br />\n   <h2 class="text-center">Share with your friends!</h2>\n   <!--<a href="https://twitter.com/intent/tweet?text=Hello%20world" class="twitter-hashtag-button" data-size="large" data-show-count="false"></a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>\n\n   <div class="fb-share-button" data-href="http://memoryduck.com" data-layout="button" data-size="large" data-mobile-iframe="true"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fmemoryduck.com%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>\n\n   <script src="//platform.linkedin.com/in.js" type="text/javascript"> lang: en_US</script>\n   <script type="IN/Share" data-url="memoryduck.com"></script>-->\n\n\n   <br /><br /><br /><br /><br />\n   <a href="/home/"<button class=" btn btn-outline-primary float-right">Skip to what other people said</button></a>\n\n\n')
+        __M_writer('\n   <br /><br /><br /><br /><br />\n\n   <h1 class="text-center">The world almost knows...</h1>\n   <br /><br />\n   <h2 class="text-center">Share with your friends!</h2>\n   <a href="https://twitter.com/intent/tweet?text=Hello%20world" class="twitter-hashtag-button" data-size="large" data-show-count="false"></a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>\n\n   <div class="fb-share-button" data-href="http://memoryduck.com" data-layout="button" data-size="large" data-mobile-iframe="true"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fmemoryduck.com%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>\n\n   <script src="//platform.linkedin.com/in.js" type="text/javascript"> lang: en_US</script>\n   <script type="IN/Share" data-url="memoryduck.com"></script>\n\n\n   <br /><br /><br /><br /><br />\n   <a href="/home/"<button class=" btn btn-outline-primary float-right">Skip and see what other people said</button></a>\n\n\n')
         return ''
     finally:
         context.caller_stack._pop_frame()

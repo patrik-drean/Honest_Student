@@ -23,44 +23,26 @@
   "model": "home.user",
   "pk": 13,
   "fields": {
-    "password": "",
-    "last_login": null,
-    "is_superuser": false,
+    "name": "Tommy Apis",
     "email": "gorilla@gmail.com",
-    "first_name": "Tommy Apis",
-    "last_name": "",
-    "is_staff": false,
-    "is_active": true,
-    "date_joined": "2018-03-02T13:43:08.361",
     "school": "BYU",
     "create_date": "2018-03-02T13:43:08.364",
     "last_modified_date": "2018-03-02T13:43:08.364",
     "mailing_list": false,
-    "review": 14,
-    "groups": [],
-    "user_permissions": []
+    "review": 14
   }
 },
 {
   "model": "home.user",
   "pk": 14,
   "fields": {
-    "password": "",
-    "last_login": null,
-    "is_superuser": false,
+    "name": "Patrick Nelson",
     "email": "patrikdrean@gmail.com",
-    "first_name": "Patrick Nelson",
-    "last_name": "",
-    "is_staff": false,
-    "is_active": true,
-    "date_joined": "2018-03-02T13:43:08.361",
     "school": "Georgia Tech University",
     "create_date": "2018-03-02T13:43:08.364",
     "last_modified_date": "2018-03-02T13:43:08.364",
     "mailing_list": true,
-    "review": 15,
-    "groups": [],
-    "user_permissions": []
+    "review": 15
   }
 }
 ]

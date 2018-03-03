@@ -44,7 +44,8 @@ INSTALLED_APPS = [
     'home',
 ]
 
-AUTH_USER_MODEL = 'home.User'
+# AUTH_USER_MODEL = 'home.User'
+AUTH_USER_MODEL = 'cuser.CUser' # This is the github user
 
 
 MIDDLEWARE = [

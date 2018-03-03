@@ -38,11 +38,14 @@ class OptionalForm(Formless):
     def clean_email(self):
         # Grab user from database with email. If a user comes back, throw exception
         email = self.cleaned_data.get('email')
-        users = hmod.User.objects.filter(email = email)
-        if users:
-            raise forms.ValidationError('Email already exists')
-        if not re.match(r"[^@]+@[^@]+\.[^@]+", email):
-            raise forms.ValidationError('Invalid email')
+        print('>>>>>>>>>>>>')
+        print(email)
+        if 'submit_normal' in self.request.POST and email != '':
+            users = hmod.User.objects.filter(email = email)
+            if users:
+                raise forms.ValidationError('Email already exists')
+            if not re.match(r"[^@]+@[^@]+\.[^@]+", email):
+                raise forms.ValidationError('Invalid email')
         return email
 
     def commit(self, request):
@@ -55,13 +58,12 @@ class OptionalForm(Formless):
 
         user = hmod.User()
         if 'submit_normal' in request.POST:
-            user.first_name = self.cleaned_data.get('name')
+            user.name = self.cleaned_data.get('name')
             user.email = self.cleaned_data.get('email')
             user.school = self.cleaned_data.get('school')
-            if self.request.POST.get('mailing_list') is not None:
+            if self.request.POST.get('mailing_list') is not None and user.email != '':
                 user.mailing_list = True
-        else:
-            user.email = ''
+
 
         user.review = review
 

@@ -5,7 +5,7 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1520089136.675223
+_modified_time = 1520115616.688951
 _enable_loop = True
 _template_filename = '/Users/patrikdrean/Documents/python_projects/honest_student/honest_student/home/templates/optional_information.html'
 _template_uri = 'optional_information.html'
@@ -75,7 +75,7 @@ def render_middle_content(context,**pageargs):
         __M_writer('\n<br />\n      <div class="row">\n         <div class="col-md-1"></div>\n         <div class="checkbox">\n            <p><input name="mailing_list" class="" id="id_mailing_list" type="checkbox" > Mark here if you\'d like updates on our progress in this discussion</p>\n         </div>\n      </div>\n      <br />\n')
         __M_writer('         <p class="">\n            <button type="submit" name = "submit_normal" class="btn btn-outline-primary float-right">')
         __M_writer(filters.html_escape(str( form.submit_text )))
-        __M_writer('</button>\n            <button type="submit" name = "skip" class=" btn btn-outline-primary float-right">Skip</button>\n\n            <br /><br />\n         </p>\n         </form>\n     </div>\n\n   </div>\n\n')
+        __M_writer('</button>\n            <button type="submit" name = "skip" class=" btn btn-outline-primary float-right">Skip and post your review</button>\n\n            <br /><br />\n         </p>\n         </form>\n     </div>\n\n   </div>\n\n')
         return ''
     finally:
         context.caller_stack._pop_frame()
