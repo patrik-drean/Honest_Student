@@ -5,7 +5,7 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1519963517.317139
+_modified_time = 1520361949.634318
 _enable_loop = True
 _template_filename = '/Users/patrikdrean/Documents/python_projects/honest_student/honest_student/home/templates/review.html'
 _template_uri = 'review.html'
@@ -64,7 +64,7 @@ def render_global_content(context,**pageargs):
         def global_content():
             return render_global_content(context)
         __M_writer = context.writer()
-        __M_writer('\n   <div id = "vertical_red_line"></div>\n   <div id = "horizontal_red_line"></div>\n')
+        __M_writer('\n   <div id = "vertical_red_line"></div>\n   <div id = "horizontal_red_line"></div>\n\n')
         return ''
     finally:
         context.caller_stack._pop_frame()
@@ -76,7 +76,7 @@ def render_top_content(context,**pageargs):
         def top_content():
             return render_top_content(context)
         __M_writer = context.writer()
-        __M_writer('\n   <br /><br /><br /><br /><br /><br />\n   <h1 class="text-center">How would you rate your experience in secondary education?</h1>\n   <div class="row"id="star_div">\n      <div class="star_wrap"><i class="far fa-star fa-2x"></i></div>\n      <div class="star_wrap"><i class="far fa-star fa-2x"></i></div>\n      <div class="star_wrap"><i class="far fa-star fa-2x"></i></div>\n      <div class="star_wrap"><i class="far fa-star fa-2x"></i></div>\n      <div class="star_wrap"><i class="far fa-star fa-2x"></i></div>\n   </div>\n\n\n   <br /><br />\n')
+        __M_writer('\n   <br /><br /><br /><br /><br /><br />\n   <h1 class="text-center">How would you rate your experience in secondary education?</h1>\n   <div class="row"id="star_div">\n      <div class="star_wrap 1"><i class="far fa-star fa-2x stars"></i></div>\n      <div class="star_wrap 2"><i class="far fa-star fa-2x stars"></i></div>\n      <div class="star_wrap 3"><i class="far fa-star fa-2x stars"></i></div>\n      <div class="star_wrap 4"><i class="far fa-star fa-2x stars"></i></div>\n      <div class="star_wrap 5"><i class="far fa-star fa-2x stars"></i></div>\n\n\n   </div>\n\n\n\n\n\n\n   <br /><br />\n')
         return ''
     finally:
         context.caller_stack._pop_frame()
@@ -85,15 +85,15 @@ def render_top_content(context,**pageargs):
 def render_middle_content(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
-        form = context.get('form', UNDEFINED)
         def middle_content():
             return render_middle_content(context)
+        form = context.get('form', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\n   ')
         __M_writer(str( form ))
         __M_writer('\n   <button type="submit" class="btn btn-outline-primary">')
         __M_writer(filters.html_escape(str( form.submit_text )))
-        __M_writer('</button>\n</form>\n</div>\n')
+        __M_writer('</button>\n</form>\n</div>\n\n')
         return ''
     finally:
         context.caller_stack._pop_frame()
@@ -101,6 +101,6 @@ def render_middle_content(context,**pageargs):
 
 """
 __M_BEGIN_METADATA
-{"filename": "/Users/patrikdrean/Documents/python_projects/honest_student/honest_student/home/templates/review.html", "uri": "review.html", "source_encoding": "utf-8", "line_map": {"28": 0, "40": 1, "45": 5, "50": 19, "55": 25, "61": 2, "67": 2, "73": 6, "79": 6, "85": 20, "92": 20, "93": 21, "94": 21, "95": 22, "96": 22, "102": 96}}
+{"filename": "/Users/patrikdrean/Documents/python_projects/honest_student/honest_student/home/templates/review.html", "uri": "review.html", "source_encoding": "utf-8", "line_map": {"28": 0, "40": 1, "45": 6, "50": 26, "55": 33, "61": 2, "67": 2, "73": 7, "79": 7, "85": 27, "92": 27, "93": 28, "94": 28, "95": 29, "96": 29, "102": 96}}
 __M_END_METADATA
 """

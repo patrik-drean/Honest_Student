@@ -4,4 +4,5 @@
 __pycache__/
 .cached_templates/
 venv/
+__dmpcache__
 )

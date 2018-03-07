@@ -6,8 +6,9 @@
 .star_wrap{
    padding: 0 10px;
 }
-.far {
+svg {
    background-color: white;
+   color: #E5CB2E;
 }
 textarea {
    resize: none;
