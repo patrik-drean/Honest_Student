@@ -1,6 +1,8 @@
 $(function(context) {
    return function() {
-      var stars_wrap = $('.star_wrap')
+
+
+      var stars_wrap = $('.star_wrap');
 
       stars_wrap.hover(
         function() {
@@ -19,7 +21,13 @@ $(function(context) {
          stars_wrap.off('mouseenter mouseleave');
       });
 
+      // Give max length to Textarea
+      $('textarea').attr('maxlength', '280');
 
+      // Count the characters in text area
+      $("textarea").keyup(function(){
+         $("#textCharCount").text((280 - $(this).val().length) + " of 280 characters remaining");
+         });
 
 }
 
@@ -62,11 +70,18 @@ function clickStars(starNumber) {
        $( element ).attr('d', colorFilled);
 
        stars_wrap = $(this).parent().parent();
+
+       // Determine if this is the star the user is clicking. Change hidden field
        if ( stars_wrap.hasClass(starNumber))
        {
-         booleanStar = false;
+          rating = $('#id_rating')
+          rating.val(starNumber);
+
+          booleanStar = false;
        }
    }
+
+   // Fill in the stars with outlines once the class was found
    else
    {
        $( element ).attr('d', colorOutlined);
