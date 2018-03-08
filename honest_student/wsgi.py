@@ -11,10 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-#added from tutorial
-from whitenoise.django import DjangoWhiteNoise
-  application = DjangoWhiteNoise(application)
-
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "honest_student.settings")
 
 application = get_wsgi_application()

@@ -24,15 +24,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'pe2g5@##mad_rx@-m5i4yv_1txq*@$$he2&!9ez#a^b+0df9#-'
 
 # SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = True
 
-
-# DEBUG = True
-#changed because of tutorial
-DEBUG = False
-
-# ALLOWED_HOSTS = []
-#changed because of tutorial
-ALLOWED_HOSTS = [*]
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -108,14 +102,20 @@ WSGI_APPLICATION = 'honest_student.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'honest_student',
+#         'USER': 'patrikdrean',
+#         'PASSWORD': '',
+#         'HOST': 'localhost',
+#         'PORT': '5432',
+#     }
+# }
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'honest_student',
-        'USER': 'patrikdrean',
-        'PASSWORD': '',
-        'HOST': 'localhost',
-        'PORT': '5432',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
