@@ -1,0 +1,39 @@
+<%inherit file="base.htm" />
+<%block name="global_content">
+   <div id = "vertical_red_line"></div>
+   <div id = "horizontal_red_line"></div>
+
+</%block>
+<%block name="top_content">
+   <br /><br /><br /><br /><br /><br />
+   <div class="header_wrapper">
+
+      <h1 class="text-center">How would you rate your experience in secondary education?</h1>
+      <div class="row"id="star_div">
+         <div class="star_wrap 1"><i class="far fa-star fa-2x stars"></i></div>
+         <div class="star_wrap 2"><i class="far fa-star fa-2x stars"></i></div>
+         <div class="star_wrap 3"><i class="far fa-star fa-2x stars"></i></div>
+         <div class="star_wrap 4"><i class="far fa-star fa-2x stars"></i></div>
+         <div class="star_wrap 5"><i class="far fa-star fa-2x stars"></i></div>
+      </div>
+
+         <br />
+
+      ${ form }
+      <p id="textCharCount">280 of 280 characters remaining   </p>
+      <button type="submit" class="btn btn-outline-primary">${ form.submit_text | h }</button>
+   </form>
+   </div>
+   </div>
+
+
+
+
+
+
+
+</%block>
+<%block name="middle_content">
+
+
+</%block>
