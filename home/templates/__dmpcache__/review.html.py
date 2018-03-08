@@ -5,7 +5,7 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1520483994.510319
+_modified_time = 1520484366.243728
 _enable_loop = True
 _template_filename = '/Users/patrikdrean/Documents/python_projects/honest_student/honest_student/home/templates/review.html'
 _template_uri = 'review.html'
@@ -31,6 +31,7 @@ def render_body(context,**pageargs):
         __M_locals = __M_dict_builtin(pageargs=pageargs)
         def middle_content():
             return render_middle_content(context._locals(__M_locals))
+        STATIC_URL = context.get('STATIC_URL', UNDEFINED)
         def global_content():
             return render_global_content(context._locals(__M_locals))
         def top_content():
@@ -68,10 +69,13 @@ def render_body(context,**pageargs):
 def render_css_link(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
+        STATIC_URL = context.get('STATIC_URL', UNDEFINED)
         def css_link():
             return render_css_link(context)
         __M_writer = context.writer()
-        __M_writer('\n<link rel="stylesheet" href="/static/home/styles/review2.css">\n')
+        __M_writer('\n<link rel="stylesheet" href="')
+        __M_writer(str( STATIC_URL ))
+        __M_writer('home/styles/review2.css">\n')
         return ''
     finally:
         context.caller_stack._pop_frame()
@@ -120,6 +124,6 @@ def render_middle_content(context,**pageargs):
 
 """
 __M_BEGIN_METADATA
-{"filename": "/Users/patrikdrean/Documents/python_projects/honest_student/honest_student/home/templates/review.html", "uri": "review.html", "source_encoding": "utf-8", "line_map": {"28": 0, "42": 1, "47": 5, "52": 11, "57": 40, "62": 44, "68": 3, "74": 3, "80": 7, "86": 7, "92": 12, "99": 12, "100": 27, "101": 27, "102": 29, "103": 29, "109": 41, "115": 41, "121": 115}}
+{"filename": "/Users/patrikdrean/Documents/python_projects/honest_student/honest_student/home/templates/review.html", "uri": "review.html", "source_encoding": "utf-8", "line_map": {"28": 0, "43": 1, "48": 5, "53": 11, "58": 40, "63": 44, "69": 3, "76": 3, "77": 4, "78": 4, "84": 7, "90": 7, "96": 12, "103": 12, "104": 27, "105": 27, "106": 29, "107": 29, "113": 41, "119": 41, "125": 119}}
 __M_END_METADATA
 """
