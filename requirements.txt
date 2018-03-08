@@ -1,0 +1,15 @@
+Django==2.0.2
+django-mako-plus==5.0.15
+django-username-email==2.2.0
+docopt==0.6.2
+jedi==0.11.1
+Mako==1.0.7
+MarkupSafe==1.0
+parso==0.1.1
+prompt-toolkit==1.0.15
+psycopg2==2.7.4
+ptpython==0.41
+Pygments==2.2.0
+pytz==2018.3
+six==1.11.0
+wcwidth==0.1.7
