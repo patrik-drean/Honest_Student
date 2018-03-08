@@ -1,1 +1,1 @@
-web: gunicorn honest_student.wsgi:application --log-file -
+web: gunicorn honest_student.wsgi --log-file -
