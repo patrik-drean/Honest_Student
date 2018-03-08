@@ -5,13 +5,13 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1520395153.950591
+_modified_time = 1520483994.510319
 _enable_loop = True
 _template_filename = '/Users/patrikdrean/Documents/python_projects/honest_student/honest_student/home/templates/review.html'
 _template_uri = 'review.html'
 _source_encoding = 'utf-8'
 import django_mako_plus
-_exports = ['global_content', 'top_content', 'middle_content']
+_exports = ['css_link', 'global_content', 'top_content', 'middle_content']
 
 
 def _mako_get_namespace(context, name):
@@ -29,15 +29,22 @@ def render_body(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
         __M_locals = __M_dict_builtin(pageargs=pageargs)
+        def middle_content():
+            return render_middle_content(context._locals(__M_locals))
         def global_content():
             return render_global_content(context._locals(__M_locals))
         def top_content():
             return render_top_content(context._locals(__M_locals))
-        def middle_content():
-            return render_middle_content(context._locals(__M_locals))
         form = context.get('form', UNDEFINED)
+        def css_link():
+            return render_css_link(context._locals(__M_locals))
         __M_writer = context.writer()
-        __M_writer('\n')
+        __M_writer('\n\n')
+        if 'parent' not in context._data or not hasattr(context._data['parent'], 'css_link'):
+            context['self'].css_link(**pageargs)
+        
+
+        __M_writer('\n\n')
         if 'parent' not in context._data or not hasattr(context._data['parent'], 'global_content'):
             context['self'].global_content(**pageargs)
         
@@ -53,6 +60,18 @@ def render_body(context,**pageargs):
         
 
         __M_writer('\n')
+        return ''
+    finally:
+        context.caller_stack._pop_frame()
+
+
+def render_css_link(context,**pageargs):
+    __M_caller = context.caller_stack._push_frame()
+    try:
+        def css_link():
+            return render_css_link(context)
+        __M_writer = context.writer()
+        __M_writer('\n<link rel="stylesheet" href="/static/home/styles/review2.css">\n')
         return ''
     finally:
         context.caller_stack._pop_frame()
@@ -101,6 +120,6 @@ def render_middle_content(context,**pageargs):
 
 """
 __M_BEGIN_METADATA
-{"filename": "/Users/patrikdrean/Documents/python_projects/honest_student/honest_student/home/templates/review.html", "uri": "review.html", "source_encoding": "utf-8", "line_map": {"28": 0, "40": 1, "45": 6, "50": 35, "55": 39, "61": 2, "67": 2, "73": 7, "80": 7, "81": 22, "82": 22, "83": 24, "84": 24, "90": 36, "96": 36, "102": 96}}
+{"filename": "/Users/patrikdrean/Documents/python_projects/honest_student/honest_student/home/templates/review.html", "uri": "review.html", "source_encoding": "utf-8", "line_map": {"28": 0, "42": 1, "47": 5, "52": 11, "57": 40, "62": 44, "68": 3, "74": 3, "80": 7, "86": 7, "92": 12, "99": 12, "100": 27, "101": 27, "102": 29, "103": 29, "109": 41, "115": 41, "121": 115}}
 __M_END_METADATA
 """
