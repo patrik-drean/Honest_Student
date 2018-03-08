@@ -1,1 +1,1 @@
-web: gunicorn honest_student.wsgi --log-file -
+web: gunicorn --chdir honest_student wsgi.py
