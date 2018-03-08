@@ -5,7 +5,7 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1520484366.243728
+_modified_time = 1520516232.194037
 _enable_loop = True
 _template_filename = '/Users/patrikdrean/Documents/python_projects/honest_student/honest_student/home/templates/review.html'
 _template_uri = 'review.html'
@@ -73,9 +73,9 @@ def render_css_link(context,**pageargs):
         def css_link():
             return render_css_link(context)
         __M_writer = context.writer()
-        __M_writer('\n<link rel="stylesheet" href="')
+        __M_writer('\n{# <link rel="stylesheet" href="')
         __M_writer(str( STATIC_URL ))
-        __M_writer('home/styles/review2.css">\n')
+        __M_writer('home/styles/review2.css"> #}\n')
         return ''
     finally:
         context.caller_stack._pop_frame()

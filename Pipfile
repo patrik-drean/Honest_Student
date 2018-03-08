@@ -10,7 +10,7 @@ django = "*"
 gunicorn = "*"
 django-heroku = "*"
 django-mako-plus = "*"
-
+whitenoise = "*"
 
 [requires]
 
