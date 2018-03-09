@@ -7,7 +7,9 @@ verify_ssl = true
 [packages]
 
 django = "*"
+dj-database-url = "*"
 gunicorn = "*"
+psycopg2 = "*"
 django-heroku = "*"
 django-mako-plus = "*"
 whitenoise = "*"

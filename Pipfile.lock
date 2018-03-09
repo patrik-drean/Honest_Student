@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "9b583d331848aff34f16a9871eec3b2b5a6e4df1f1d7f5b4b6b1911422028f1e"
+            "sha256": "7ee9f23da9605e4a58d853718bd6202ce38dd4def893fab0fc5a1b05f9d40445"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -38,9 +38,9 @@
         },
         "django-mako-plus": {
             "hashes": [
-                "sha256:1b8f685f69da8826b0b5ed6ce379fc337fde247a1a45ec12df4ccb63a219dafb"
+                "sha256:b65257e32b4ea549f7ae22d7c9672d4b0646c6d6b1bae24304f7a9bd0632216b"
             ],
-            "version": "==5.1.7"
+            "version": "==5.1.8"
         },
         "gunicorn": {
             "hashes": [
