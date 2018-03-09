@@ -13,6 +13,17 @@ psycopg2 = "*"
 django-heroku = "*"
 django-mako-plus = "*"
 whitenoise = "*"
+django-username-email = "*"
+docopt = "*"
+pipenv = "*"
+ptpython = "*"
+python-dateutil = "*"
+pytz = "*"
+requests = "*"
+six = "*"
+urllib3 = "*"
+
+
 
 [requires]
 
