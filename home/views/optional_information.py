@@ -38,8 +38,6 @@ class OptionalForm(Formless):
     def clean_email(self):
         # Grab user from database with email. If a user comes back, throw exception
         email = self.cleaned_data.get('email')
-        print('>>>>>>>>>>>>')
-        print(email)
         if 'submit_normal' in self.request.POST and email != '':
             users = hmod.User.objects.filter(email = email)
             if users:
