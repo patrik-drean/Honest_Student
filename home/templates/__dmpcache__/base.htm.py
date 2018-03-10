@@ -5,13 +5,13 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1520483899.7825139
+_modified_time = 1520639521.47771
 _enable_loop = True
 _template_filename = '/Users/patrikdrean/Documents/python_projects/honest_student/honest_student/home/templates/base.htm'
 _template_uri = 'base.htm'
 _source_encoding = 'utf-8'
 import django_mako_plus
-_exports = ['css_link', 'navbar', 'global_content', 'top_content', 'left_content', 'middle_content', 'right_content', 'footer_content', 'js_link']
+_exports = ['navbar', 'global_content', 'top_content', 'left_content', 'middle_content', 'right_content', 'footer_content', 'js_link']
 
 
 import datetime 
@@ -20,33 +20,26 @@ def render_body(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
         __M_locals = __M_dict_builtin(pageargs=pageargs)
-        def middle_content():
-            return render_middle_content(context._locals(__M_locals))
-        def js_link():
-            return render_js_link(context._locals(__M_locals))
-        def right_content():
-            return render_right_content(context._locals(__M_locals))
-        def left_content():
-            return render_left_content(context._locals(__M_locals))
         def top_content():
             return render_top_content(context._locals(__M_locals))
-        self = context.get('self', UNDEFINED)
-        def css_link():
-            return render_css_link(context._locals(__M_locals))
-        def navbar():
-            return render_navbar(context._locals(__M_locals))
         def footer_content():
             return render_footer_content(context._locals(__M_locals))
+        def js_link():
+            return render_js_link(context._locals(__M_locals))
+        def left_content():
+            return render_left_content(context._locals(__M_locals))
+        def middle_content():
+            return render_middle_content(context._locals(__M_locals))
         def global_content():
             return render_global_content(context._locals(__M_locals))
+        self = context.get('self', UNDEFINED)
+        def navbar():
+            return render_navbar(context._locals(__M_locals))
+        def right_content():
+            return render_right_content(context._locals(__M_locals))
         __M_writer = context.writer()
         __M_writer('<!DOCTYPE html>\n<html>\n    <meta charset="UTF-8">\n    <head>\n      ')
-        __M_writer("\n        <title>Pat's Template</title>\n\n        ")
-        if 'parent' not in context._data or not hasattr(context._data['parent'], 'css_link'):
-            context['self'].css_link(**pageargs)
-        
-
-        __M_writer('\n        <!-- jQuery -->\n        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>\n\n        <!-- Google fonts -->\n        <link href="https://fonts.googleapis.com/css?family=Nanum+Pen+Script" rel="stylesheet">\n\n        <!-- SVG cdn import -->\n        <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>\n\n       <!-- Bootstrap CSS link -->\n       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">\n\n')
+        __M_writer('\n        <title>Pat\'s Template</title>\n\n        <!-- jQuery -->\n        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>\n\n        <!-- Google fonts -->\n        <link href="https://fonts.googleapis.com/css?family=Nanum+Pen+Script" rel="stylesheet">\n\n        <!-- SVG cdn import -->\n        <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>\n\n       <!-- Bootstrap CSS link -->\n       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">\n\n')
         __M_writer('        <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>\n\n')
         __M_writer('        <script src="/django_mako_plus/dmp-common.min.js"></script>\n        ')
         __M_writer(str( django_mako_plus.links(self) ))
@@ -91,17 +84,6 @@ def render_body(context,**pageargs):
         
 
         __M_writer('\n    </body>\n</html>\n')
-        return ''
-    finally:
-        context.caller_stack._pop_frame()
-
-
-def render_css_link(context,**pageargs):
-    __M_caller = context.caller_stack._push_frame()
-    try:
-        def css_link():
-            return render_css_link(context)
-        __M_writer = context.writer()
         return ''
     finally:
         context.caller_stack._pop_frame()
@@ -197,6 +179,6 @@ def render_js_link(context,**pageargs):
 
 """
 __M_BEGIN_METADATA
-{"filename": "/Users/patrikdrean/Documents/python_projects/honest_student/honest_student/home/templates/base.htm", "uri": "base.htm", "source_encoding": "utf-8", "line_map": {"17": 6, "19": 0, "43": 2, "44": 6, "49": 9, "50": 23, "51": 26, "52": 27, "53": 27, "58": 42, "63": 43, "68": 49, "73": 54, "78": 57, "83": 60, "88": 65, "93": 72, "99": 9, "110": 42, "121": 43, "132": 49, "143": 54, "154": 57, "165": 60, "176": 65, "187": 72, "198": 187}}
+{"filename": "/Users/patrikdrean/Documents/python_projects/honest_student/honest_student/home/templates/base.htm", "uri": "base.htm", "source_encoding": "utf-8", "line_map": {"17": 6, "19": 0, "41": 2, "42": 6, "43": 22, "44": 25, "45": 26, "46": 26, "51": 41, "56": 42, "61": 48, "66": 53, "71": 56, "76": 59, "81": 64, "86": 71, "92": 41, "103": 42, "114": 48, "125": 53, "136": 56, "147": 59, "158": 64, "169": 71, "180": 169}}
 __M_END_METADATA
 """
