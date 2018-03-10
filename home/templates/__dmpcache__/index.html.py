@@ -5,7 +5,7 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1520714270.831887
+_modified_time = 1520716390.887341
 _enable_loop = True
 _template_filename = '/Users/patrikdrean/Documents/python_projects/honest_student/honest_student/home/templates/index.html'
 _template_uri = 'index.html'
@@ -29,11 +29,11 @@ def render_body(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
         __M_locals = __M_dict_builtin(pageargs=pageargs)
-        def top_content():
-            return render_top_content(context._locals(__M_locals))
-        users = context.get('users', UNDEFINED)
         def middle_content():
             return render_middle_content(context._locals(__M_locals))
+        users = context.get('users', UNDEFINED)
+        def top_content():
+            return render_top_content(context._locals(__M_locals))
         __M_writer = context.writer()
         __M_writer('\n\n')
         if 'parent' not in context._data or not hasattr(context._data['parent'], 'top_content'):
@@ -54,16 +54,16 @@ def render_body(context,**pageargs):
 def render_top_content(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
+        users = context.get('users', UNDEFINED)
         def top_content():
             return render_top_content(context)
-        users = context.get('users', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\n<div id="video_content">\n</div>\n<div id="review_content">\n')
         for u in users:
             __M_writer('      <div class="review_wrap">\n         <div class="user_div">\n         <p class="name_text">')
-            __M_writer(str( u.name ))
+            __M_writer(str( u.name if u.name != None else 'Anonymous' ))
             __M_writer('</p>\n         <p class="school_text">')
-            __M_writer(str( u.school ))
+            __M_writer(str( u.school if u.school != None else '' ))
             __M_writer('</p>\n\n         <div class="row star_div " name = "')
             __M_writer(str( u.review.rating ))
             __M_writer('">\n            <div class="star_wrap 1"><i class="far fa-star fa-2x stars"></i></div>\n            <div class="star_wrap 2"><i class="far fa-star fa-2x stars"></i></div>\n            <div class="star_wrap 3"><i class="far fa-star fa-2x stars"></i></div>\n            <div class="star_wrap 4"><i class="far fa-star fa-2x stars"></i></div>\n            <div class="star_wrap 5"><i class="far fa-star fa-2x stars"></i></div>\n         </div>\n\n         </div>\n         <div class="message_div">\n         <p>')

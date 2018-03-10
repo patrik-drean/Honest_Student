@@ -5,7 +5,7 @@ from home import models as hmod
 
 @view_function
 def process_request(request):
-    users = hmod.User.objects.all()
+    users = hmod.User.objects.all().order_by('-create_date')
     context = {
         'users': users,
     }

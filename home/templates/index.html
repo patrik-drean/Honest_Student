@@ -7,8 +7,8 @@
    %for u in users:
       <div class="review_wrap">
          <div class="user_div">
-         <p class="name_text">${ u.name }</p>
-         <p class="school_text">${ u.school }</p>
+         <p class="name_text">${ u.name if u.name != None else 'Anonymous' }</p>
+         <p class="school_text">${ u.school if u.school != None else '' }</p>
 
          <div class="row star_div " name = "${ u.review.rating }">
             <div class="star_wrap 1"><i class="far fa-star fa-2x stars"></i></div>

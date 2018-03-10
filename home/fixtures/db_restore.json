@@ -30,6 +30,16 @@
   }
 },
 {
+  "model": "home.review",
+  "pk": 17,
+  "fields": {
+    "rating": 1,
+    "message": "I don't want people to know who I am, but I think school stinks.",
+    "create_date": "2018-03-02T13:43:08.323",
+    "last_modified_date": "2018-03-02T13:43:08.323"
+  }
+},
+{
   "model": "home.user",
   "pk": 13,
   "fields": {
@@ -66,6 +76,19 @@
     "last_modified_date": "2018-03-02T13:43:08.364",
     "mailing_list": true,
     "review": 16
+  }
+},
+{
+  "model": "home.user",
+  "pk": 16,
+  "fields": {
+    "name": null,
+    "email": null,
+    "school": null,
+    "create_date": "2018-03-02T13:43:08.364",
+    "last_modified_date": "2018-03-02T13:43:08.364",
+    "mailing_list": false,
+    "review": 17
   }
 }
 ]
