@@ -7,8 +7,9 @@
    padding: 0 10px;
 }
 svg {
-   background-color: #0473D5;
-   color: #E5CB2E;
+   background-color: inherit;
+   /* color: #E5CB2E; */
+   color: #FDE338;
 }
 textarea {
    resize: none;
@@ -67,9 +68,21 @@ html, body {
 .header_wrapper {
    color: white;
    background-color: #0473D5;
+   /* background-color: inherit; */
    padding: 1em 0 2em 0 ;
    width: 90%;
    margin: 0 auto;
    border-radius: 8px;
-   border: 2px solid black;
+   border: 1px solid black;
+}
+
+h1 {
+   -webkit-text-stroke: 1px black;
+   color: white;
+   text-shadow:
+    3px 3px 0 #000,
+  -1px -1px 0 #000,
+   1px -1px 0 #000,
+   -1px 1px 0 #000,
+    1px 1px 0 #000;
 }

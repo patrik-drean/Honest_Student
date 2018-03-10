@@ -5,7 +5,7 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1520639521.47771
+_modified_time = 1520650255.46013
 _enable_loop = True
 _template_filename = '/Users/patrikdrean/Documents/python_projects/honest_student/honest_student/home/templates/base.htm'
 _template_uri = 'base.htm'
@@ -20,26 +20,26 @@ def render_body(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
         __M_locals = __M_dict_builtin(pageargs=pageargs)
-        def top_content():
-            return render_top_content(context._locals(__M_locals))
+        def navbar():
+            return render_navbar(context._locals(__M_locals))
         def footer_content():
             return render_footer_content(context._locals(__M_locals))
-        def js_link():
-            return render_js_link(context._locals(__M_locals))
+        def top_content():
+            return render_top_content(context._locals(__M_locals))
+        def right_content():
+            return render_right_content(context._locals(__M_locals))
+        def global_content():
+            return render_global_content(context._locals(__M_locals))
         def left_content():
             return render_left_content(context._locals(__M_locals))
         def middle_content():
             return render_middle_content(context._locals(__M_locals))
-        def global_content():
-            return render_global_content(context._locals(__M_locals))
         self = context.get('self', UNDEFINED)
-        def navbar():
-            return render_navbar(context._locals(__M_locals))
-        def right_content():
-            return render_right_content(context._locals(__M_locals))
+        def js_link():
+            return render_js_link(context._locals(__M_locals))
         __M_writer = context.writer()
         __M_writer('<!DOCTYPE html>\n<html>\n    <meta charset="UTF-8">\n    <head>\n      ')
-        __M_writer('\n        <title>Pat\'s Template</title>\n\n        <!-- jQuery -->\n        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>\n\n        <!-- Google fonts -->\n        <link href="https://fonts.googleapis.com/css?family=Nanum+Pen+Script" rel="stylesheet">\n\n        <!-- SVG cdn import -->\n        <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>\n\n       <!-- Bootstrap CSS link -->\n       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">\n\n')
+        __M_writer('\n        <title>Honest Student</title>\n\n        <!-- jQuery -->\n        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>\n\n        <!-- Google fonts -->\n        <link href="https://fonts.googleapis.com/css?family=Nanum+Pen+Script" rel="stylesheet">\n\n        <!-- SVG cdn import -->\n        <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>\n\n       <!-- Bootstrap CSS link -->\n       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">\n\n')
         __M_writer('        <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>\n\n')
         __M_writer('        <script src="/django_mako_plus/dmp-common.min.js"></script>\n        ')
         __M_writer(str( django_mako_plus.links(self) ))

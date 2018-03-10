@@ -14,7 +14,7 @@ def process_request(request):
     context = {'form': form,}
     if form.is_valid():
         form.commit(request)
-        return HttpResponseRedirect('/home/share')
+        return HttpResponseRedirect('/share/')
 
 
     return request.dmp.render('optional_information.html', context)

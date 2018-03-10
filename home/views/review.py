@@ -20,7 +20,7 @@ def process_request(request):
         request.session['message'] = form.cleaned_data.get('message')
         request.session['rating'] = form.cleaned_data.get('rating')
 
-        return HttpResponseRedirect('/home/optional_information')
+        return HttpResponseRedirect('/optional_information/')
 
 
     return HttpResponse(request.dmp.render('review.html', context))
@@ -40,5 +40,5 @@ class ReviewForm(Formless):
         self.submit_text = 'Next'
 
     def commit(self):
-        u = self.cleaned_data.get('rating') 
+        u = self.cleaned_data.get('rating')
         pass

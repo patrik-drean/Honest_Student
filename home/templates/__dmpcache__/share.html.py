@@ -5,7 +5,7 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1520115344.33994
+_modified_time = 1520651137.032844
 _enable_loop = True
 _template_filename = '/Users/patrikdrean/Documents/python_projects/honest_student/honest_student/home/templates/share.html'
 _template_uri = 'share.html'
@@ -29,10 +29,10 @@ def render_body(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
         __M_locals = __M_dict_builtin(pageargs=pageargs)
-        def global_content():
-            return render_global_content(context._locals(__M_locals))
         def middle_content():
             return render_middle_content(context._locals(__M_locals))
+        def global_content():
+            return render_global_content(context._locals(__M_locals))
         __M_writer = context.writer()
         __M_writer('\n')
         if 'parent' not in context._data or not hasattr(context._data['parent'], 'global_content'):
