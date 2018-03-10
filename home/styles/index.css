@@ -1,3 +1,53 @@
-h4.utc-time {
-    color: #AA3333;
+#video_content {
+   /* background: url(/static/home/media/img/abstract_1.jpg) no-repeat center center fixed;
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover; */
+   height: 92vh;
+}
+#review_content {
+   min-height: 40vh;
+}
+.review_wrap {
+   min-height: 8em;
+   margin: 1.5em 0 1.5em 0;
+}
+.user_div, .message_div {
+   display: inline-block;
+   vertical-align: top;
+}
+.user_div {
+   margin: 0 0 0 10%;
+   width: 20%;
+   text-align: center;
+}
+.message_div {
+   margin: 0 0 0 10%;
+   width: 50%;
+   text-align: justify;
+}
+p {
+   margin: 0 0 0 0;
+}
+.school_text {
+   color: grey;
+   margin: .1em 0 1.3em 0 ;
+}
+.name_text {
+   font-weight: 600;
+   font-size: 1.5em;
+}
+
+.star_div {
+   margin: 0 auto;
+   width: 185px;
+}
+.stars {
+   margin: 0 auto;
+   color: #FDE338;
+}
+hr {
+   width: 90%;
+   margin: 0 auto;
 }

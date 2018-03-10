@@ -1,4 +1,34 @@
 <%inherit file="app_base.htm" />
 
 <%block name="top_content">
+<div id="video_content">
+</div>
+<div id="review_content">
+   %for u in users:
+      <div class="review_wrap">
+         <div class="user_div">
+         <p class="name_text">${ u.name }</p>
+         <p class="school_text">${ u.school }</p>
+
+         <div class="row star_div " name = "${ u.review.rating }">
+            <div class="star_wrap 1"><i class="far fa-star fa-2x stars"></i></div>
+            <div class="star_wrap 2"><i class="far fa-star fa-2x stars"></i></div>
+            <div class="star_wrap 3"><i class="far fa-star fa-2x stars"></i></div>
+            <div class="star_wrap 4"><i class="far fa-star fa-2x stars"></i></div>
+            <div class="star_wrap 5"><i class="far fa-star fa-2x stars"></i></div>
+         </div>
+
+         </div>
+         <div class="message_div">
+         <p>${ u.review.message }</p>
+         </div>
+      </div>
+      <hr />
+   %endfor
+</div>
 </%block>
+
+
+
+
+<%block name="middle_content"></%block>
