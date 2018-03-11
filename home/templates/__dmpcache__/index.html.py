@@ -5,7 +5,7 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1520716390.887341
+_modified_time = 1520727245.255444
 _enable_loop = True
 _template_filename = '/Users/patrikdrean/Documents/python_projects/honest_student/honest_student/home/templates/index.html'
 _template_uri = 'index.html'
@@ -29,9 +29,11 @@ def render_body(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
         __M_locals = __M_dict_builtin(pageargs=pageargs)
+        review_count = context.get('review_count', UNDEFINED)
+        users = context.get('users', UNDEFINED)
+        average_rating = context.get('average_rating', UNDEFINED)
         def middle_content():
             return render_middle_content(context._locals(__M_locals))
-        users = context.get('users', UNDEFINED)
         def top_content():
             return render_top_content(context._locals(__M_locals))
         __M_writer = context.writer()
@@ -54,11 +56,17 @@ def render_body(context,**pageargs):
 def render_top_content(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
-        users = context.get('users', UNDEFINED)
+        review_count = context.get('review_count', UNDEFINED)
         def top_content():
             return render_top_content(context)
+        users = context.get('users', UNDEFINED)
+        average_rating = context.get('average_rating', UNDEFINED)
         __M_writer = context.writer()
-        __M_writer('\n<div id="video_content">\n</div>\n<div id="review_content">\n')
+        __M_writer('\n<div id="video_content">\n   <div id="average_review_div">\n      <p>Average Rating\n         <span id="review_count_span">\n            ')
+        __M_writer(str( average_rating ))
+        __M_writer('\n            <!--<div class=" " id="average_rating">\n               <div class="star_wrap 1"><i class="far fa-star fa-2x stars"></i></div>\n               <div class="star_wrap 2"><i class="far fa-star fa-2x stars"></i></div>\n               <div class="star_wrap 3"><i class="far fa-star fa-2x stars"></i></div>\n               <div class="star_wrap 4"><i class="far fa-star fa-2x stars"></i></div>\n               <div class="star_wrap 5"><i class="far fa-star fa-2x stars"></i></div>\n            </div> -->\n         </span>\n         </p>\n   </div>\n   <div id="review_count_div">\n      <p>Total Reviews <span id="review_count_span">')
+        __M_writer(str( review_count ))
+        __M_writer('</span></p>\n   </div>\n</div>\n<div id="review_content">\n')
         for u in users:
             __M_writer('      <div class="review_wrap">\n         <div class="user_div">\n         <p class="name_text">')
             __M_writer(str( u.name if u.name != None else 'Anonymous' ))
@@ -88,6 +96,6 @@ def render_middle_content(context,**pageargs):
 
 """
 __M_BEGIN_METADATA
-{"filename": "/Users/patrikdrean/Documents/python_projects/honest_student/honest_student/home/templates/index.html", "uri": "index.html", "source_encoding": "utf-8", "line_map": {"28": 0, "38": 1, "43": 29, "48": 34, "54": 3, "61": 3, "62": 7, "63": 8, "64": 10, "65": 10, "66": 11, "67": 11, "68": 13, "69": 13, "70": 23, "71": 23, "72": 28, "78": 34, "89": 78}}
+{"filename": "/Users/patrikdrean/Documents/python_projects/honest_student/honest_student/home/templates/index.html", "uri": "index.html", "source_encoding": "utf-8", "line_map": {"28": 0, "40": 1, "45": 46, "50": 51, "56": 3, "65": 3, "66": 8, "67": 8, "68": 20, "69": 20, "70": 24, "71": 25, "72": 27, "73": 27, "74": 28, "75": 28, "76": 30, "77": 30, "78": 40, "79": 40, "80": 45, "86": 51, "97": 86}}
 __M_END_METADATA
 """

@@ -4,8 +4,44 @@
    -moz-background-size: cover;
    -o-background-size: cover;
    background-size: cover; */
-   height: 92vh;
+   height: 87vh;
+   margin: 0 0 5vh 0;
 }
+#video_content p {
+   font-family: 'Nanum Pen Script', cursive;
+   font-size: 2.5em;
+}
+#review_count_div {
+   position: absolute;
+   top: 73vh;
+   right: 20%;
+}
+#average_review_div {
+   position: absolute;
+   top: 73vh;
+   left: 20%;
+}
+#average_rating, .star_wrap, #average_review_div p {
+   display: inline-block;
+}
+#review_count_span {
+   background-color: #0473D4;
+   padding: 0 .3em;
+   border-radius: 8px;
+   color: white;
+   font-size: 1.2em;
+}
+#average_review_span {
+   padding: 0 .3em;
+   display: inline-block;
+
+}
+
+
+
+
+
+
 #review_content {
    min-height: 40vh;
 }

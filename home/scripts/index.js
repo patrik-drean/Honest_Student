@@ -3,7 +3,7 @@ $(function(context) {
 
 
       var star_divs = $('.star_div');
-      rating_selection(star_divs)
+      rating_selection(star_divs);
 
 
 }

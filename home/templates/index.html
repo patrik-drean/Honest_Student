@@ -2,6 +2,23 @@
 
 <%block name="top_content">
 <div id="video_content">
+   <div id="average_review_div">
+      <p>Average Rating
+         <span id="review_count_span">
+            ${ average_rating }
+            <!--<div class=" " id="average_rating">
+               <div class="star_wrap 1"><i class="far fa-star fa-2x stars"></i></div>
+               <div class="star_wrap 2"><i class="far fa-star fa-2x stars"></i></div>
+               <div class="star_wrap 3"><i class="far fa-star fa-2x stars"></i></div>
+               <div class="star_wrap 4"><i class="far fa-star fa-2x stars"></i></div>
+               <div class="star_wrap 5"><i class="far fa-star fa-2x stars"></i></div>
+            </div> -->
+         </span>
+         </p>
+   </div>
+   <div id="review_count_div">
+      <p>Total Reviews <span id="review_count_span">${ review_count }</span></p>
+   </div>
 </div>
 <div id="review_content">
    %for u in users:
