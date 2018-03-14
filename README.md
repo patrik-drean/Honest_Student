@@ -1,5 +1,5 @@
-<h1 align="center"> Honest_Student Website </h1>
-<hr/>
+<h1 align="center" style="border-bottom: 3px solid #a8aeb7"> Honest_Student Website </h1>
+
 A project that will help facilitate a discussion about the current state of the secondary education system. 
 The "Honest Student" project will be the first platform where students can give an honest review on the positives 
 and negatives of our current education structure.
