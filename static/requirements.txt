@@ -1,4 +1,4 @@
-Django==2.0.2
+Django==2.2.10
 django-mako-plus==5.0.15
 django-username-email==2.2.0
 docopt==0.6.2
