@@ -9,7 +9,7 @@ parso==0.1.1
 prompt-toolkit==1.0.15
 psycopg2==2.7.4
 ptpython==0.41
-Pygments==2.2.0
+Pygments==2.7.4
 pytz==2018.3
 six==1.11.0
 wcwidth==0.1.7
